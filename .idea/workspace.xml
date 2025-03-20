@@ -48,7 +48,7 @@
   "keyToString": {
     "Python.BFS.executor": "Debug",
     "Python.puzzle-8.executor": "Debug",
-    "Python.puzzle-8BFS.executor": "Run",
+    "Python.puzzle-8BFS.executor": "Debug",
     "Python.tree_travel.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -193,11 +193,30 @@
       <option name="project" value="LOCAL" />
       <updated>1742471737261</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="tt">
+      <option name="closed" value="true" />
+      <created>1742472947185</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1742472947185</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tt" />
     <option name="LAST_COMMIT_MESSAGE" value="tt" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/BFS.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
