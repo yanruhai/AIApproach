@@ -46,7 +46,7 @@ class BFS(abc.ABC):  # iterative lengthening search
             explored_set.append(cur_state)
             action_list=self.actions(cur_state)#获得后继节点的action
             for act in action_list:
-                state=self.result(act)
+                state=self.result(cur_state,act)
                 if self.__frontier_explored_test(frontier,explored_set,state):#该节点未访问过
                     if self.goal_test(state):
                         single_path.append(state)
@@ -56,6 +56,6 @@ class BFS(abc.ABC):  # iterative lengthening search
             #single_path.pop()
 
     @abc.abstractmethod
-    def result(self,act):
+    def result(self,state,act):
         """获得action后的状态"""
         pass
