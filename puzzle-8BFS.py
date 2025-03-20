@@ -1,3 +1,5 @@
+from sympy import limit
+
 import BFS
 import numpy as np
 import enum
@@ -20,15 +22,21 @@ class Board():
             for t2 in np.arange(limit):
                 self.bo[t1, t2] = t1 * limit + t2
 
+    def __eq__(self, other):
+        for i in np.arange(self.limit):
+            for j in np.arange(self.limit):
+                if self.bo[i,j]!=other[i,j]:
+                    return False
+        return True
+
     def shuffle(self):
+        array = [t for t in np.arange(self.limit**2)]
         random.shuffle(array)
-        init_state = np.zeros((line_limit, line_limit), dtype=int)
-        goal = np.zeros((line_limit, line_limit), dtype=int)
-        for t1 in np.arange(line_limit):
-            for t2 in np.arange(line_limit):
-                init_state[t1, t2] = array[t1 * line_limit + t2]
-                goal[t1, t2] = t1 * line_limit + t2
-        print("打乱后的数组:", init_state)
+        for t1 in np.arange(self.limit):
+            for t2 in np.arange(self.limit):
+                self.bo[t1, t2] = array[t1 * self.limit + t2]
+
+        print("打乱后的数组:", self.bo)
 
 
 
