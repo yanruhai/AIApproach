@@ -26,9 +26,11 @@ class BFS(abc.ABC):  # iterative lengthening search
     def __frontier_explored_test(self,frontier,explored_set,state):
             for temp in frontier:
                 if temp==state:
+                    #print(f"{temp}=={state}")
                     return False
             for temp in explored_set:
                 if temp==state:
+                    #print(f"{temp}=={state}")
                     return False
             return True
 
@@ -40,7 +42,12 @@ class BFS(abc.ABC):  # iterative lengthening search
         explored_set = []
         single_path = []
         frontier.append(self.init_state)
+        count=0
         while len(frontier)>0:
+            count+=1
+            if count%1000==0:
+                print(f"frontier:{len(frontier)}")
+                print(f"explored_set:{len(explored_set)}")
             cur_state=frontier.pop(0)#出队
             single_path.append(cur_state)
             explored_set.append(cur_state)

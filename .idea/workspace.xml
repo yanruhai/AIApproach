@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d4606b46-c6ee-4b03-a3a6-7a75b01d8480" name="Changes" comment="tt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BFS.py" beforeDir="false" afterPath="$PROJECT_DIR$/BFS.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/puzzle-8BFS.py" beforeDir="false" afterPath="$PROJECT_DIR$/puzzle-8BFS.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +32,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/yanruhai/AIApproach&quot;,
-    &quot;accountId&quot;: &quot;2f61ff7e-c308-47b4-91e1-a46c049b3c81&quot;
+    &quot;url&quot;: &quot;https://github.com/yanruhai/AIApproach.git&quot;,
+    &quot;accountId&quot;: &quot;27594e26-22b9-48de-9a96-d124a260e23e&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -48,7 +49,7 @@
   "keyToString": {
     "Python.BFS.executor": "Debug",
     "Python.puzzle-8.executor": "Debug",
-    "Python.puzzle-8BFS.executor": "Debug",
+    "Python.puzzle-8BFS.executor": "Run",
     "Python.tree_travel.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -156,7 +157,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-ce3d9afa04ac-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.20224.347" />
+        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
       </set>
     </attachedChunks>
   </component>
@@ -212,9 +213,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/BFS.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/puzzle-8BFS.py</url>
+          <line>116</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/puzzle-8BFS.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
