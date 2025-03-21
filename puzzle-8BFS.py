@@ -120,7 +120,7 @@ class PuzzleBFS(BFS.BFS):
 
 
 k=8#0为空格
-random.seed(41)
+random.seed(4)
 line_limit=math.floor(math.sqrt(k+1))
 # 定义一个一维数组
 goal= Board()

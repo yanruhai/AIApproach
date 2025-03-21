@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d4606b46-c6ee-4b03-a3a6-7a75b01d8480" name="Changes" comment="tt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BFS.py" beforeDir="false" afterPath="$PROJECT_DIR$/BFS.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/puzzle-8BFS.py" beforeDir="false" afterPath="$PROJECT_DIR$/puzzle-8BFS.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,17 +44,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.BFS.executor": "Debug",
-    "Python.puzzle-8.executor": "Debug",
-    "Python.puzzle-8BFS.executor": "Run",
-    "Python.tree_travel.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.BFS.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.puzzle-8.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.puzzle-8BFS.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tree_travel.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.puzzle-8BFS">
     <configuration name="BFS" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AIapproach" />
@@ -202,27 +201,19 @@
       <option name="project" value="LOCAL" />
       <updated>1742472947185</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="tt">
+      <option name="closed" value="true" />
+      <created>1742526507674</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742526507674</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tt" />
     <option name="LAST_COMMIT_MESSAGE" value="tt" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/puzzle-8BFS.py</url>
-          <line>116</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/puzzle-8BFS.py</url>
-          <line>52</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
