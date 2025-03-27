@@ -2,14 +2,12 @@ import copy
 
 from sympy import limit
 
-import BFS
+import DFS
 import numpy as np
 import enum
 import math
 import random
-
-from astarsearch import AstarSearch, T
-from search import ExploredSet,Node
+from search import ExploredSet,Node,Frontier
 
 class Action(enum.Enum):
     UP = 0
@@ -18,11 +16,12 @@ class Action(enum.Enum):
     RIGHT = 3
 
 class Board():
-    def get_id(self):
-        return self.num
     limit=3
     bo=None
     num=12345678#默认值
+    def get_id(self):
+        return self.num
+
     def __str__(self):
         return f"{self.num}"
 
@@ -95,10 +94,12 @@ class Board():
         print("打乱后的数组:", self.bo)
 
 
-class ExploredDict(BFS.ExploredSet):
-
+class ExploredDict(ExploredSet):
     def check(self, state):
-
+        '''temp= self.expl.get(state.get_num())
+        if temp==None:
+            return True
+        return False'''
         if state.get_num() in self.expl:
             return False
         return True
@@ -107,7 +108,7 @@ class ExploredDict(BFS.ExploredSet):
         self.expl[state.get_num()] = state
 
 
-class PuzzleBFS(BFS.BFS):
+class PuzzleDFS(DFS.DFS):
     def init_exploredset(self):
        return ExploredDict()
 
@@ -135,8 +136,6 @@ class PuzzleBFS(BFS.BFS):
 
 
 
-
-
 def node_print(n):
     print(math.floor(n/1000000))
     print(math.floor((n/1000)%1000))
@@ -151,16 +150,15 @@ goal= Board()
 init_state=Board()
 init_state.shuffle()
 # 打乱数组
-goal2=Board(limit=2)
-init_state2=Board(limit=2)
-init_state2.shuffle()
-pb=PuzzleBFS(init_state,goal,3)
+
+pb=PuzzleDFS(init_state,goal,3)
 results= pb.search()
 #n=123456789
 #node_print(n)
-for k in results:
+print(f"共有{len(results)}个解")
+'''for k in results:
     while k!=None:
         node_print(k.get_num())
-        k=k.parent
+        k=k.parent'''
 
 
