@@ -3,9 +3,10 @@ import abc
 
 class State:
     id=0#用于标识状态，如果无法确定，可以在搜索的时候自增
-
+    data=None#存放数据的字段，可以是表格或整数
     def get_id(self):
         return self.id
+
 
 
 class Node:
@@ -19,7 +20,7 @@ class Node:
         return self.state.get_num()
 
     def __str__(self):
-            return f"{self.state.get_num()}"
+            return f"{self.state.get_id()}"
 
     def __init__(self,state,parent=None):
         self.state=state
@@ -32,6 +33,8 @@ class Node:
 class ExploredSet(abc.ABC):
     expl={}
 
+    def __len__(self):
+        return len(self.expl)
     @abc.abstractmethod
     def put(self, state):
         """获得状态可以使用的action列表"""
@@ -43,13 +46,24 @@ class ExploredSet(abc.ABC):
 
 class Frontier(abc.ABC):
     state_list=[]
-    use_dict = False
+    use_dict = True
     dict_for_check = {}  # 用于check的哈希表,可以不使用
+    last_op=None#调试用
+    def check_for_debug(self):
+        for ind,t in enumerate(self.state_list):
+            for ind2, t2 in enumerate(self.state_list):
+                if t.get_id()==t2.get_id() and ind!=ind2 :
+                    print()
+        if len(self.state_list)!=len(self.dict_for_check):
+            print(self.last_op)
+
+
 
     def __len__(self):
         return len(self.state_list)
 
     def __init__(self,use_dict=False):
+        self.last_op=self.__init__
         self.use_dict=use_dict
 
     def check(self,state):
@@ -64,9 +78,16 @@ class Frontier(abc.ABC):
         return True
 
     def put_state(self, state):
+        self.last_op =self.put_state
         self.state_list.append(state)
+        self.dict_for_check[state.get_id()]=state
 
     def pop(self,ind=None):
       if ind is None:
-          return self.state_list.pop()
-      return  self.state_list.pop(ind)
+          t= self.state_list.pop()
+          self.dict_for_check.pop(t.get_id())
+          return t
+      t=  self.state_list.pop(ind)
+      self.dict_for_check.pop(t.get_id())
+
+      return t

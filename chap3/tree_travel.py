@@ -1,5 +1,5 @@
 import BFS
-import numpy as np
+
 
 #用BFS类测试图的找路
 class TreeTravel(BFS.BFS):

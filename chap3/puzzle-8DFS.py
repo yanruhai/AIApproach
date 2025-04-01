@@ -1,13 +1,12 @@
 import copy
 
-from sympy import limit
-
 import DFS
 import numpy as np
 import enum
 import math
 import random
-from search import ExploredSet,Node,Frontier
+from search import ExploredSet
+
 
 class Action(enum.Enum):
     UP = 0

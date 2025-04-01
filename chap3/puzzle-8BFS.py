@@ -1,13 +1,10 @@
-from functools import partial
+import copy
 
+import BFS
 import numpy as np
 import enum
 import math
 import random
-import copy
-
-from astarsearch import AStarState, AstarSearch, T
-from search import ExploredSet
 
 
 class Action(enum.Enum):
@@ -16,12 +13,7 @@ class Action(enum.Enum):
     LEFT= 2
     RIGHT = 3
 
-class Board(AStarState):
-    def compute_hvalue(self):
-        if not self.hfunction is None:
-            self.hvalue=self.hfunction(self)
-
-
+class Board():
     def get_id(self):
         return self.num
     limit=3
@@ -54,14 +46,6 @@ class Board(AStarState):
                     return i, j
         return 0, 0
 
-    def find_elem(self,num):
-        temp = np.arange(self.limit)
-        for i in temp:
-            for j in temp:
-                if self.bo[i, j] == num:
-                    return i, j
-        return -1, -1
-
     def __convert_to_num(self):
         temp = 0
         for t1 in np.arange(self.limit):
@@ -88,8 +72,8 @@ class Board(AStarState):
         temp.__convert_to_num()
         return temp
 
-    '''def get_elem(self,i,j):
-        return self.bo[i,j]'''
+    def get_elem(self,i,j):
+        return self.bo[i,j]
 
     def __eq__(self, other):
         return  self.num==other.get_num()
@@ -107,52 +91,53 @@ class Board(AStarState):
         print("打乱后的数组:", self.bo)
 
 
-
-
-class ExploredDict(ExploredSet):
+class ExploredDict(BFS.ExploredSet):
 
     def check(self, state):
 
-        if state.get_id() in self.expl:
+        if state.get_num() in self.expl:
             return False
         return True
 
     def put(self, state):
-        self.expl[state.get_id()] = state
+        self.expl[state.get_num()] = state
 
-class Astar_8puzzle_Search(AstarSearch):
 
-    def actions(self, state: T):
+class PuzzleBFS(BFS.BFS):
+    def init_exploredset(self):
+       return ExploredDict()
+
+    line_limit=3
+
+    def __init__(self,init_state,goal=None,line_limit=3):
+        super().__init__(init_state,goal)
+        self.line_limit=line_limit
+
+    def actions(self, state):
         zi, zj = state.findZero()
-        # move = [False, False, False, False]  # 表示上下左右四个动作
-        move = []
+        #move = [False, False, False, False]  # 表示上下左右四个动作
+        move=[]
         if zi > 0: move.append(Action.DOWN)
         if zi < line_limit - 1: move.append(Action.UP)  # 可以上
         if zj > 0: move.append(Action.RIGHT)  # 可以右
         if zj < line_limit - 1: move.append(Action.LEFT)  # 可以左
         return move
 
-    def goal_test(self, state: T):
-        return state == goal
+    def goal_test(self, state):
+        return state==goal
 
-    def init_exploredset(self):
-        return ExploredDict()
+    def result(self,state, act):
+        return state.do_action(act)
 
-    def result(self, state, act):
-        tt= state.do_action(act)
-        tt.compute_hvalue()#重新计算hvalue
-        tt.set_gvalue(state.get_gvalue()+1)
-        return tt
 
-def my_hfunction(limit,goal,cur_state):
-    hv=0
-    for i in np.arange(limit):
-        for j in np.arange(limit):
-            t=goal[i,j]
-            m1,m2 = cur_state.find_elem(t)
-            if m1>=0 and m2>=0:#计算曼哈顿距离
-                hv=hv+ math.fabs(m1-i)+math.fabs(m2-j)
-    return hv
+
+
+
+def node_print(n):
+    print(math.floor(n/1000000))
+    print(math.floor((n/1000)%1000))
+    print(n%1000)
+    print()
 
 k=8#0为空格
 random.seed(24)
@@ -162,18 +147,16 @@ goal= Board()
 init_state=Board()
 init_state.shuffle()
 # 打乱数组
-goal2=Board(limit=3)
-init_state2=Board(limit=3)
+goal2=Board(limit=2)
+init_state2=Board(limit=2)
 init_state2.shuffle()
-hfunc=partial(my_hfunction,3,goal)
-goal.set_hfunction(goal)
-init_state.set_hfunction(hfunc)
-init_state.compute_hvalue()
-se=Astar_8puzzle_Search(init_state,goal)
-tts= se.search()
-print(tts)
-
-
-
+pb=PuzzleBFS(init_state,goal,3)
+results= pb.search()
+#n=123456789
+#node_print(n)
+for k in results:
+    while k!=None:
+        node_print(k.get_num())
+        k=k.parent
 
 

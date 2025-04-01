@@ -17,6 +17,8 @@ class My_Astar_State(AStarState):
         self.gvalue=gvalue
         self.hvalue=hvalue
         self.id=id
+        self.fvalue=self.gvalue+self.hvalue
+
 
     def get_hvalue(self):
         return 0
@@ -50,8 +52,9 @@ class My_Astarsearch(AstarSearch):
         return ExploredDict()
 
     def result(self, state, act):
-        cost=self.map[state.get_id()][act]
+        cost=self.map[state.get_id()][act]+state.get_gvalue()
         new_state=My_Astar_State(act,cost)
+
         return new_state
 
 class ExploredDict(ExploredSet):
@@ -66,6 +69,7 @@ class ExploredDict(ExploredSet):
         self.expl[state.get_id()] = state
 
 init_state=My_Astar_State(0,0)
+
 test= My_Astarsearch(init_state)
 r= test.search()
 while not r is None:
