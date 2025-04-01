@@ -7,7 +7,6 @@ class MST_Prim:
     result_arcs=[]
 
     nodes=[]#总节点数
-
     def __init__(self,arc_map,nodes):
         self.arc_map=arc_map
         self.nodes=nodes
