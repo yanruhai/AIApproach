@@ -113,7 +113,6 @@ class Board(AStarState):
                 self.bo[t1, t2] = array[t1 * self.limit + t2]
                 temp=temp*10+self.bo[t1,t2]
         self.num=temp
-        print("打乱后的数组:", self.bo)
 
 
 class PuzzleSearch:
@@ -123,22 +122,34 @@ class PuzzleSearch:
         self.state=init_state
         self.goal=goal
 
-    def search_climb(self):
+    def search_climb_random_restart(self):
         if self.state==self.goal:
             return None
         r_s = None
-        while r_s is None:
+        b=False
+
+        while not b:
             lz = self.actions(self.state)
             min = self.state.compute_hv()
             r_s = None
+            b = True
+            count = 0
             for k_act in lz:
                 st_a=self.state.do_action(k_act)
                 hv= st_a.compute_hv()
                 if hv<min:
                     min=hv
                     r_s=st_a
-                if min < self.state.compute_hv():
-                    self.state=r_s
+                    b=False
+                    count+=1
+                    print(f"调整{count}次")
+            if min < self.state.compute_hv():#出现更好的结果
+                self.state=r_s
+            else:
+                self.state.shuffle()
+                b=False
+            if self.goal_test(self.state):
+                return self.state
         return self.state
 
 
@@ -175,7 +186,7 @@ goal2=Board(limit=3)
 init_state2=Board(limit=3)
 init_state2.shuffle()
 p=PuzzleSearch(init_state,goal)
-r= p.search_climb()
+r= p.search_climb_random_restart()
 print(r)
 
 
