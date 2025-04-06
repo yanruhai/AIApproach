@@ -7,6 +7,9 @@ class State:
     def get_id(self):
         return self.id
 
+    def set_id(self, d):
+        self.id = d
+
 
 
 class Node:
@@ -35,14 +38,15 @@ class ExploredSet(abc.ABC):
 
     def __len__(self):
         return len(self.expl)
-    @abc.abstractmethod
-    def put(self, state):
-        """获得状态可以使用的action列表"""
-        pass
 
-    @abc.abstractmethod
+    def put(self, state):
+        self.expl[state.get_id()]=state
+
+
     def check(self,state):
-        pass
+        if state.get_id() in self.expl:
+            return False
+        return True
 
 class Frontier(abc.ABC):
     state_list=[]

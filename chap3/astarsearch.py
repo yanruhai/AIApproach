@@ -1,6 +1,6 @@
 import numpy as np
 import abc
-from search import ExploredSet, Node, Frontier,State
+from chap3.search import ExploredSet, Node, Frontier,State
 from typing import TypeVar, Generic, override
 from collections import Counter
 
@@ -14,12 +14,12 @@ class AStarState(State):
     def set_hfunction(self,hfunction):
         self.hfunction=hfunction
         self.hvalue=hfunction(self)
-        self.__compute_fvalue()
+        self.compute_fvalue()
 
     def get_fvalue(self):
         return self.fvalue
 
-    def __compute_fvalue(self):
+    def compute_fvalue(self):
         self.hvalue=0
         if  not self.hfunction is None:
             self.hvalue=self.hfunction(self)
@@ -32,7 +32,7 @@ class AStarState(State):
         return self.gvalue
     def set_gvalue(self,gvalue):
         self.gvalue=gvalue
-        self.__compute_fvalue()
+        self.compute_fvalue()
 
 
 
@@ -60,10 +60,10 @@ class OrderedFrontier(Frontier,Generic[T]):
 
 
 
-    def get_state_dict(self,state):
+    def get_state_dict(self,state:T):
         return self.dict_for_check.get(state.get_id())
 
-    def update(self,state):
+    def update(self,state:T):
         '''将state状态更新到队列里，前提是该状态在队列中'''
         ind=0
         k=None
@@ -90,22 +90,20 @@ class AstarSearch(abc.ABC,Generic[T]):  # iterative lengthening search
 
 
     @abc.abstractmethod
-    def actions(self,state:T):
+    def actions(self,state:T)->list:
         """获得状态可以使用的action列表"""
         pass
 
     @abc.abstractmethod
-    def goal_test(self, state:T):
+    def goal_test(self, state:T)->bool:
         """获得状态可以使用的action列表"""
         pass
 
-    @abc.abstractmethod
+
     def init_exploredset(self):
-        """获得状态可以使用的action列表"""
-        pass
+       return ExploredSet()
 
     def __frontier_explored_test(self,frontier,explored_set,state:T):
-
             t = frontier.check(state)
             if not t: return False
             t=explored_set.check(state)
@@ -113,12 +111,12 @@ class AstarSearch(abc.ABC,Generic[T]):  # iterative lengthening search
             return True
 
 
-    def __print_frontier__(self,frontier):
+    def __print_frontier__(self,frontier:OrderedFrontier):
         for k in frontier.state_list:
             print(f"id={k.get_id()}",end='')
         print()
 
-    def __check_frontier(self,frontier):
+    def __check_frontier(self,frontier:OrderedFrontier):
         temp_map={}
         c_count=0
         for k in frontier.state_list:
@@ -150,7 +148,7 @@ class AstarSearch(abc.ABC,Generic[T]):  # iterative lengthening search
             cur_node=nodes[cur_state.get_id()]
             if self.goal_test(cur_state):#判断是否是解
                 found_result[cur_state.get_id()]= cur_node
-                #return cur_node
+                return cur_node
             else:
                 explored_set.put(cur_state)
                 action_list=self.actions(cur_state)#获得后继节点的action
@@ -168,13 +166,13 @@ class AstarSearch(abc.ABC,Generic[T]):  # iterative lengthening search
                                     #print("更新节点")
                                     nodes[state.get_id()] = child_node  # 更换
                                     frontier.update(state)
-        return found_result
+        return None
 
 
 
 
     @abc.abstractmethod
-    def result(self,state,act):
+    def result(self,state:T,act)->T:
         """获得action后的状态"""
         pass
 

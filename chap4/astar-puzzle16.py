@@ -6,8 +6,7 @@ import math
 import random
 import copy
 
-from astarsearch import AStarState, AstarSearch, T
-from search import ExploredSet
+from chap3.astarsearch import AStarState, AstarSearch, T
 
 
 class Action(enum.Enum):
@@ -24,7 +23,7 @@ class Board(AStarState):
 
     def get_id(self):
         return self.num
-    limit=3
+    limit=4
     bo=None
     num=12345678#默认值
     def __str__(self):
@@ -38,7 +37,7 @@ class Board(AStarState):
     def __setitem__(self, key, value):
         self.bo[key] = value
 
-    def __init__(self,limit=3):
+    def __init__(self,limit=4):
         super().__init__()
         self.limit=limit
         self.bo = np.zeros((limit, limit), dtype=int)
@@ -145,7 +144,8 @@ def my_hfunction(limit,goal,cur_state):
                 hv=hv+ math.fabs(m1-i)+math.fabs(m2-j)
     return hv
 
-k=8#0为空格
+
+k=15#0为空格
 random.seed(21)
 line_limit=math.floor(math.sqrt(k+1))
 # 定义一个一维数组
@@ -153,10 +153,10 @@ goal= Board()
 init_state=Board()
 init_state.shuffle()
 # 打乱数组
-goal2=Board(limit=3)
-init_state2=Board(limit=3)
+goal2=Board(limit=4)
+init_state2=Board(limit=4)
 init_state2.shuffle()
-hfunc=partial(my_hfunction,3,goal)
+hfunc=partial(my_hfunction,4,goal)
 goal.set_hfunction(hfunc)
 init_state.set_hfunction(hfunc)
 init_state.compute_hvalue()
@@ -166,8 +166,3 @@ tts= se.search()
 while tts!=None:
     print(tts.get_id())
     tts=tts.parent
-
-
-
-
-

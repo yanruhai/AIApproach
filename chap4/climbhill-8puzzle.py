@@ -1,13 +1,12 @@
 from functools import partial
-import cProfile
+
 import numpy as np
 import enum
 import math
 import random
 import copy
 
-from astarsearch import AStarState, AstarSearch, T
-from search import ExploredSet
+from chap3.astarsearch import AStarState
 
 
 class Action(enum.Enum):
@@ -47,6 +46,7 @@ class Board(AStarState):
                 self.bo[t1, t2] = t1 * limit + t2
 
 
+
     def findZero(self):
         temp = np.arange(self.limit)
         for i in temp:
@@ -76,7 +76,7 @@ class Board(AStarState):
         zi, zj = temp.findZero()
         match act:
             case Action.LEFT:
-                temp[(zi, zj)] = temp[(zi, zj + 1)]
+                temp[zi, zj] = temp[zi, zj + 1]
                 temp[zi, zj + 1] = 0
             case Action.RIGHT:
                 temp[zi, zj] = temp[zi, zj - 1]
@@ -90,12 +90,19 @@ class Board(AStarState):
         temp.__convert_to_num()
         return temp
 
-    '''def get_elem(self,i,j):
-        return self.bo[i,j]'''
-
     def __eq__(self, other):
         return  self.num==other.get_num()
 
+    def compute_hv(self):
+        '''计算曼哈顿距离'''
+        hv = 0
+        for i in np.arange(line_limit):
+            for j in np.arange(line_limit):
+                t = goal[i, j]
+                m1, m2 = self.find_elem(t)
+                if m1 >= 0 and m2 >= 0:  # 计算曼哈顿距离
+                    hv = hv + math.fabs(m1 - i) + math.fabs(m2 - j)
+        return hv
 
     def shuffle(self):
         array = [t for t in np.arange(self.limit**2)]
@@ -109,14 +116,35 @@ class Board(AStarState):
         print("打乱后的数组:", self.bo)
 
 
+class PuzzleSearch:
+    goal=None
+    state=None
+    def __init__(self,init_state:Board,goal:Board):
+        self.state=init_state
+        self.goal=goal
+
+    def search_climb(self):
+        if self.state==self.goal:
+            return None
+        r_s = None
+        while r_s is None:
+            lz = self.actions(self.state)
+            min = self.state.compute_hv()
+            r_s = None
+            for k_act in lz:
+                st_a=self.state.do_action(k_act)
+                hv= st_a.compute_hv()
+                if hv<min:
+                    min=hv
+                    r_s=st_a
+                if min < self.state.compute_hv():
+                    self.state=r_s
+        return self.state
 
 
 
-class Astar_8puzzle_Search(AstarSearch):
-
-    def actions(self, state: T):
+    def actions(self, state:Board):
         zi, zj = state.findZero()
-        # move = [False, False, False, False]  # 表示上下左右四个动作
         move = []
         if zi > 0: move.append(Action.DOWN)
         if zi < line_limit - 1: move.append(Action.UP)  # 可以上
@@ -124,10 +152,9 @@ class Astar_8puzzle_Search(AstarSearch):
         if zj < line_limit - 1: move.append(Action.LEFT)  # 可以左
         return move
 
-    def goal_test(self, state: T):
+
+    def goal_test(self, state: Board):
         return state == goal
-
-
 
     def result(self, state, act):
         tt= state.do_action(act)
@@ -135,15 +162,6 @@ class Astar_8puzzle_Search(AstarSearch):
         tt.set_gvalue(state.get_gvalue()+1)
         return tt
 
-def my_hfunction(limit,goal,cur_state):
-    hv=0
-    for i in np.arange(limit):
-        for j in np.arange(limit):
-            t=goal[i,j]
-            m1,m2 = cur_state.find_elem(t)
-            if m1>=0 and m2>=0:#计算曼哈顿距离
-                hv=hv+ math.fabs(m1-i)+math.fabs(m2-j)
-    return hv
 
 k=8#0为空格
 random.seed(21)
@@ -156,16 +174,10 @@ init_state.shuffle()
 goal2=Board(limit=3)
 init_state2=Board(limit=3)
 init_state2.shuffle()
-hfunc=partial(my_hfunction,3,goal)
-goal.set_hfunction(hfunc)
-init_state.set_hfunction(hfunc)
-init_state.compute_hvalue()
-se=Astar_8puzzle_Search(init_state,goal)
-tts= se.search()
-#cProfile.run('se.search()')
-while tts!=None:
-    print(tts.get_id())
-    tts=tts.parent
+p=PuzzleSearch(init_state,goal)
+r= p.search_climb()
+print(r)
+
 
 
 

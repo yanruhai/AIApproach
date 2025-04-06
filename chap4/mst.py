@@ -5,9 +5,8 @@ inf=10**100
 class MST_Prim:
     arc_map=None#邻接矩阵表示的图
     result_arcs=[]
-
-    nodes=[]#总节点数
-    def __init__(self,arc_map,nodes):
+    nodes=set()#总节点数
+    def __init__(self,arc_map,nodes:set):
         self.arc_map=arc_map
         self.nodes=nodes
 
@@ -27,8 +26,8 @@ class MST_Prim:
         return arcs,min_arc
 
     def search(self)->list:
-        visited_nodes= {self.nodes[0]}  #任取一个节点
-        unvisited_nodes= set(self.nodes[1:])
+        visited_nodes= {self.nodes.pop()}  #任取一个节点
+        unvisited_nodes= self.nodes
         result_arcs=[]
         while len(unvisited_nodes) > 0:
             arcs,min_arc=self.__refresh_arcs(visited_nodes,unvisited_nodes)
@@ -48,10 +47,20 @@ arc_map = [[inf, 45, 23, 78, 12, 56, 89, 34],
            [73, 28, 52, 40, 69, inf, 37, 91],
            [80, 19, 71, 58, 49, 30, inf, 62],
            [68, 95, 26, 83, 17, 53, 70, inf]]
+
+arc_map3= np.array([
+    [inf, 6, 1, 5, float('inf'), float('inf')],
+    [6, inf, 5, float('inf'), 3, float('inf')],
+    [1, 5, inf, 5, 6, 4],
+    [5, float('inf'), 5,inf, float('inf'), 2],
+    [float('inf'), 3, 6, float('inf'), inf, 6],
+    [float('inf'), float('inf'), 4, 2, 6, inf]
+])
 arc_map2 = [[inf,1,2],[1,inf,3],[2,3,inf]]
-mst=MST_Prim(arc_map,list(range(len(arc_map))))
+
+mst=MST_Prim(arc_map3,set(range(len(arc_map3))))
 r=mst.search()
-print(r)
+#print(r)
 
 
 
