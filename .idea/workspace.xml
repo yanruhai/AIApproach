@@ -29,12 +29,12 @@
     &quot;assignee&quot;: &quot;yanruhai&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/yanruhai/AIApproach.git",
-    "accountId": "27594e26-22b9-48de-9a96-d124a260e23e"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/yanruhai/AIApproach.git&quot;,
+    &quot;accountId&quot;: &quot;27594e26-22b9-48de-9a96-d124a260e23e&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -44,32 +44,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.BFS.executor": "Debug",
-    "Python.astar-8puzzle (1).executor": "Run",
-    "Python.astar-8puzzle.executor": "Run",
-    "Python.astar-puzzle16.executor": "Run",
-    "Python.astarimpl.executor": "Debug",
-    "Python.astarsearch.executor": "Debug",
-    "Python.climbhill-8puzzle.executor": "Debug",
-    "Python.heutest.executor": "Debug",
-    "Python.mst.executor": "Debug",
-    "Python.puzzle-8.executor": "Debug",
-    "Python.puzzle-8BFS.executor": "Run",
-    "Python.puzzle-8DFS (1).executor": "Run",
-    "Python.puzzle-8DFS.executor": "Run",
-    "Python.queen8-anneling.executor": "Run",
-    "Python.queen8-climbhill.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.tree_travel.executor": "Run",
-    "Python.tsp.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/pythonproj/AIapproach/chap4",
-    "settings.editor.selected.configurable": "promo.ai.assistant"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.BFS.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.astar-8puzzle (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.astar-8puzzle.executor&quot;: &quot;Run&quot;,
+    &quot;Python.astar-puzzle16.executor&quot;: &quot;Run&quot;,
+    &quot;Python.astarimpl.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.astarsearch.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.climbhill-8puzzle.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.heutest.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.mst.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.puzzle-8.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.puzzle-8BFS.executor&quot;: &quot;Run&quot;,
+    &quot;Python.puzzle-8DFS (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.puzzle-8DFS.executor&quot;: &quot;Run&quot;,
+    &quot;Python.queen8-anneling.executor&quot;: &quot;Run&quot;,
+    &quot;Python.queen8-climbhill.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tree_travel.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tsp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/pythonproj/AIapproach/chap4&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;promo.ai.assistant&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\pythonproj\AIapproach\chap4" />
@@ -271,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744090423542</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="tt">
+      <option name="closed" value="true" />
+      <created>1744096778877</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1744096778877</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
