@@ -1,11 +1,6 @@
-import numpy as np
-import enum
 import math
 import random
 import copy
-
-from sympy import limit
-
 
 class Queen:
     queens=[]
@@ -88,24 +83,3 @@ class Queen:
                     self.count_attacking_pairs()#重新计算分数
 
         return self.queens
-
-
-
-
-
-
-
-
-
-k=100
-random.seed=21
-q = [random.randint(0, k-1) for _ in range(k)]
-#q=[1,1,1,1,1,1,1,1]
-qu=Queen(k,q)
-q=qu.search()
-print(q)
-
-'''ss=[62, 41, 71, 81, 9, 22, 12, 37, 18, 25, 42, 24, 26, 40, 58, 16, 64, 46, 52, 80, 84, 94, 34, 68, 65, 83, 10, 19, 47, 85, 79, 2, 28, 70, 27, 29, 89, 92, 97, 8, 78, 93, 75, 43, 87, 33, 3, 7, 0, 48, 86, 98, 31, 74, 17, 66, 1, 88, 11, 39, 51, 76, 5, 91, 99, 14, 73, 56, 90, 44, 36, 30, 95, 23, 21, 72, 96, 4, 54, 77, 50, 45, 38, 60, 67, 57, 6, 35, 53, 63, 20, 69, 15, 55, 61, 49, 32, 82, 59, 13]
-f=Queen(k,ss)
-print(f.score)'''
-
