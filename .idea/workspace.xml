@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4606b46-c6ee-4b03-a3a6-7a75b01d8480" name="Changes" comment="tt">
-      <change afterPath="$PROJECT_DIR$/chap4/queen8-anneling.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chap4/queen8.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chap4/queen8-climbhill.py" beforeDir="false" afterPath="$PROJECT_DIR$/chap4/queen8-climbhill.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap4/queen8-anneling.py" beforeDir="false" afterPath="$PROJECT_DIR$/chap4/queen8-anneling.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +59,7 @@
     "Python.puzzle-8BFS.executor": "Run",
     "Python.puzzle-8DFS (1).executor": "Run",
     "Python.puzzle-8DFS.executor": "Run",
-    "Python.queen8-anneling.executor": "Debug",
+    "Python.queen8-anneling.executor": "Run",
     "Python.queen8-climbhill.executor": "Run",
     "Python.test.executor": "Run",
     "Python.tree_travel.executor": "Run",
@@ -265,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743900304754</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="tt">
+      <option name="closed" value="true" />
+      <created>1744090423542</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1744090423542</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

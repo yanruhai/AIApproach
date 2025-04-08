@@ -1,13 +1,24 @@
+import copy
 import math
 import random
 from abc import abstractmethod
+from typing import Union
+
+from numpy.ma.core import arange
 
 from queen8 import  Queen
 import abc
 
 class ObjectFunction(abc.ABC):
+    '''目标函数，需要实现的方法,'''
     @abstractmethod
-    def objective_function(self,state):
+    def objective_function(self,state)->Union[int, float]:
+        '''返回函数值'''
+        pass
+
+    @abstractmethod
+    def get_next_state(self, state) -> Union[int, float]:
+        '''获得领域状态'''
         pass
 
 
@@ -55,31 +66,41 @@ class SimulatedAnnealing:
         return best_state
 
 
-# 参数设置
-initial_state = random.uniform(-10, 10)
-initial_temperature = 100
-cooling_rate = 0.95
-max_iterations = 1000
-sa=SimulatedAnnealing ()
+
 # 运行模拟退火算法
-best_solution = sa.simulated_annealing(initial_state, initial_temperature, cooling_rate, max_iterations)
-print(f"最优解: {best_solution}")
-print(f"最优值: {sa.objective_function(best_solution)}")
+#best_solution = sa.simulated_annealing(initial_state, initial_temperature, cooling_rate, max_iterations,None)
+#print(f"最优解: {best_solution}")
+#print(f"最优值: {sa.objective_function(best_solution)}")
 
 class QueeAnneal(Queen,ObjectFunction):
     sa=SimulatedAnnealing()
 
     def objective_function(self, state):
-        pass
+        select_list=[]
+        for i in arange(self.limit):
+            for j in arange(self.limit):
+                if not state[i]==j:
+                    temp=copy.copy(state)
+                    temp[i]=j
+                    select_list.append(temp)
+        k=random.randint(0,55)#选中k做为当前动作
+        self.queens=select_list[k]
+        return self.count_attacking_pairs()
 
-    def search(self):
-        pass
 
 
-k=100
+
+k=8
 random.seed=21
 q = [random.randint(0, k-1) for _ in range(k)]
 #q=[1,1,1,1,1,1,1,1]
-qu=Queen(k,q)
-q=qu.search()
-print(q)
+qu=QueeAnneal(k,q)
+
+initial_state = random.uniform(-10, 10)
+initial_temperature = 100
+cooling_rate = 0.95
+max_iterations = 1000
+sa=SimulatedAnnealing ()
+best_solution = sa.simulated_annealing(initial_state, initial_temperature, cooling_rate, max_iterations,qu)
+print(f"最优解: {best_solution}")
+print(f"最优值: {sa.objective_function(best_solution)}")
