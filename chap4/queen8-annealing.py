@@ -12,56 +12,47 @@ import abc
 class SearchQuestion(abc.ABC):
     '''目标函数，需要实现的方法,'''
     @abstractmethod
-    def objective_function(self,state)->Union[int, float]:
-        '''目标函数,返回函数值'''
+    def objective_function(self,neighbor_step_nums)->Union[int, float]:
+        '''目标函数,调整状态并返回函数值'''
         pass
 
     @abstractmethod
-    def get_next_state(self) :
-        '''获得领域状态'''
+    def goal_check(self):
+        '''检测是否已经有解'''
+        pass
+
+    @abstractmethod
+    def get_cur_state(self):
         pass
 
 
 class SimulatedAnnealing:
 
-
-    def simulated_annealing(self, initial_state, initial_temperature, cooling_rate, max_iterations, search_obj:SearchQuestion):
-        """
-        模拟退火算法实现
-        :param initial_state: 初始状态
-        :param initial_temperature: 初始温度
-        :param cooling_rate: 冷却率
-        :param max_iterations: 最大迭代次数
-        :return: 最优状态
-        """
+    def simulated_annealing(self,initial_state, initial_temperature, cooling_rate, max_iterations,search_question:SearchQuestion,k_discrete):
+        '''k_discrete是分块的数量,8皇后里是8'''
         current_state = initial_state
-        current_energy = search_obj.objective_function(current_state)
+        current_energy = search_question.objective_function(current_state)
         best_state = current_state
         best_energy = current_energy
         temperature = initial_temperature
-
-        for i in range(max_iterations):
-            print(f"iter={i}")
-            # 生成一个邻域状态
-            neighbor_state = search_obj.get_next_state()
-            # 确保邻域状态在区间 [-10, 10] 内
-
-            neighbor_energy = search_obj.objective_function(neighbor_state)
-
-            # 计算能量差
+        unit_step=10/k_discrete
+        for _ in range(max_iterations):
+            step=random.uniform(-1, 1)
+            neighbor_state_float = current_state + step#获得随机值
+            neighbor_state_float = max(-10, min(neighbor_state_float, 10))
+            neighbor_step_nums=round(abs(neighbor_state_float)/unit_step)#获得需要变化的块数
+            neighbor_energy =search_question.objective_function(neighbor_step_nums)
+            if search_question.goal_check():
+                return search_question.get_cur_state()
             delta_energy = neighbor_energy - current_energy
-
-            # 判断是否接受邻域状态
             if delta_energy < 0 or random.random() < math.exp(-delta_energy / temperature):
-                current_state = neighbor_state
+                current_state = neighbor_state_float
                 current_energy = neighbor_energy
 
-            # 更新最优状态
             if current_energy < best_energy:
                 best_state = current_state
                 best_energy = current_energy
 
-            # 降温
             temperature *= cooling_rate
 
         return best_state
@@ -76,8 +67,11 @@ class SimulatedAnnealing:
 class QueeAnneal(Queen, SearchQuestion):
     sa=SimulatedAnnealing()
 
-    def get_next_state(self):
-        select_list = []
+    def get_cur_state(self):
+        return self.queens
+
+    def __get_next_state(self,neighbor_step_nums):
+        '''select_list = []
         for i in arange(self.limit):
             for j in arange(self.limit):
                 if not self.queens[i] == j:
@@ -87,9 +81,11 @@ class QueeAnneal(Queen, SearchQuestion):
 
         k = random.randint(0, self.limit**2-self.limit-1)  # 选中k做为当前动作
         self.queens = select_list[k]
-        return self.count_attacking_pairs()
+        return self.count_attacking_pairs()'''
 
-    def objective_function(self, state):
+
+    def objective_function(self, neighbor_step_nums):
+        self.tune_random(neighbor_step_nums)
         return self.count_attacking_pairs()
 
 
@@ -103,12 +99,12 @@ q = [random.randint(0, k-1) for _ in range(k)]
 #q=[1,1,1,1,1,1,1,1]
 qu=QueeAnneal(k,q)
 
-initial_state = random.uniform(-10, 10)
-initial_temperature = 100
+initial_state = 0
+initial_temperature = k**2*50
 cooling_rate = 0.95
 max_iterations = 10000
 sa=SimulatedAnnealing ()
-best_solution = sa.simulated_annealing(initial_state, initial_temperature, cooling_rate, max_iterations,qu)
+best_solution = sa.simulated_annealing(initial_state, initial_temperature, cooling_rate, max_iterations,qu,k)
 print(f"最优解: {best_solution}")
 print(qu.queens)
 

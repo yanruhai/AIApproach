@@ -2,6 +2,9 @@ import math
 import random
 import copy
 
+from torch.onnx.symbolic_opset11 import arange
+
+
 class Queen:
     queens=[]
     limit=0
@@ -33,6 +36,17 @@ class Queen:
         if self.score==0:
             return True
         return False
+
+    def tune_random(self,num_k):
+        '''num_k是需要调整的个数'''
+        if num_k==0:
+            return
+        numbers_col = random.sample(range(0, self.limit), num_k)
+        numbers_row = random.sample(range(0, self.limit), num_k)
+        for col in numbers_col:
+           self.queens[col]=numbers_row[col]
+        self.count_attacking_pairs()
+
 
     def tune(self):
         first_score=self.score

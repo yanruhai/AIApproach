@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4606b46-c6ee-4b03-a3a6-7a75b01d8480" name="Changes" comment="tt">
+      <change afterPath="$PROJECT_DIR$/chap4/classicsimulatedannealing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap4/simulated_annealing_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chap4/queen8-anneling.py" beforeDir="false" afterPath="$PROJECT_DIR$/chap4/queen8-anneling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap4/queen8-anneling.py" beforeDir="false" afterPath="$PROJECT_DIR$/chap4/queen8-annealing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap4/queen8.py" beforeDir="false" afterPath="$PROJECT_DIR$/chap4/queen8.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +35,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/yanruhai/AIApproach.git&quot;,
-    &quot;accountId&quot;: &quot;27594e26-22b9-48de-9a96-d124a260e23e&quot;
+    &quot;url&quot;: &quot;https://github.com/yanruhai/AIApproach&quot;,
+    &quot;accountId&quot;: &quot;2f61ff7e-c308-47b4-91e1-a46c049b3c81&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -52,6 +56,7 @@
     &quot;Python.astar-puzzle16.executor&quot;: &quot;Run&quot;,
     &quot;Python.astarimpl.executor&quot;: &quot;Debug&quot;,
     &quot;Python.astarsearch.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.classicsimulatedannealing.executor&quot;: &quot;Run&quot;,
     &quot;Python.climbhill-8puzzle.executor&quot;: &quot;Debug&quot;,
     &quot;Python.heutest.executor&quot;: &quot;Debug&quot;,
     &quot;Python.mst.executor&quot;: &quot;Debug&quot;,
@@ -59,9 +64,13 @@
     &quot;Python.puzzle-8BFS.executor&quot;: &quot;Run&quot;,
     &quot;Python.puzzle-8DFS (1).executor&quot;: &quot;Run&quot;,
     &quot;Python.puzzle-8DFS.executor&quot;: &quot;Run&quot;,
+    &quot;Python.queen8-annealing (1).executor&quot;: &quot;Debug&quot;,
     &quot;Python.queen8-anneling.executor&quot;: &quot;Run&quot;,
     &quot;Python.queen8-climbhill.executor&quot;: &quot;Run&quot;,
+    &quot;Python.queen8.executor&quot;: &quot;Run&quot;,
+    &quot;Python.simulated_annealing_test.executor&quot;: &quot;Run&quot;,
     &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test2.executor&quot;: &quot;Run&quot;,
     &quot;Python.tree_travel.executor&quot;: &quot;Run&quot;,
     &quot;Python.tsp.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -78,8 +87,8 @@
       <recent name="C:\pythonproj\AIapproach\chap3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.queen8-anneling">
-    <configuration name="climbhill-8puzzle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.queen8-annealing (1)">
+    <configuration name="classicsimulatedannealing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AIapproach" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -92,7 +101,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap4/climbhill-8puzzle.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap4/classicsimulatedannealing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -101,7 +110,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="queen8-anneling" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="queen8-annealing (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AIapproach" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -114,7 +123,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap4/queen8-anneling.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap4/queen8-annealing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -123,7 +132,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="queen8-climbhill" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="queen8" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AIapproach" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -136,7 +145,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap4/queen8-climbhill.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap4/queen8.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -145,7 +154,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="simulated_annealing_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AIapproach" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chap4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap4/simulated_annealing_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AIapproach" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -158,29 +189,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tsp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AIapproach" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chap4" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap4/tsp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -191,18 +200,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.queen8-anneling" />
-        <item itemvalue="Python.queen8-climbhill" />
-        <item itemvalue="Python.tsp" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.climbhill-8puzzle" />
+        <item itemvalue="Python.queen8-annealing (1)" />
+        <item itemvalue="Python.queen8" />
+        <item itemvalue="Python.test2" />
+        <item itemvalue="Python.classicsimulatedannealing" />
+        <item itemvalue="Python.simulated_annealing_test" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
+        <option value="bundled-python-sdk-6a3326d57233-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.24807.21" />
       </set>
     </attachedChunks>
   </component>
@@ -318,6 +327,26 @@
           <url>file://$PROJECT_DIR$/chap4/climbhill-8puzzle.py</url>
           <line>138</line>
           <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/chap4/queen8-annealing.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/chap4/queen8-annealing.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/chap4/queen8-annealing.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/chap4/queen8-annealing.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
