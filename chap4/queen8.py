@@ -2,7 +2,7 @@ import math
 import random
 import copy
 
-from torch.onnx.symbolic_opset11 import arange
+
 
 
 class Queen:
@@ -43,8 +43,8 @@ class Queen:
             return
         numbers_col = random.sample(range(0, self.limit), num_k)
         numbers_row = random.sample(range(0, self.limit), num_k)
-        for col in numbers_col:
-           self.queens[col]=numbers_row[col]
+        for ind,col in enumerate(numbers_col):
+           self.queens[col]=numbers_row[ind]
         self.count_attacking_pairs()
 
 
@@ -97,3 +97,6 @@ class Queen:
                     self.count_attacking_pairs()#重新计算分数
 
         return self.queens
+
+q=Queen(100,  [84, 33, 51, 4, 15, 44, 61, 88, 83, 78, 54, 18, 31, 70, 40, 7, 66, 76, 79, 57, 97, 35, 9, 23, 13, 96, 34, 39, 80, 75, 32, 74, 95, 12, 17, 38, 29, 43, 69, 67, 58, 45, 98, 73, 11, 55, 91, 72, 22, 47, 8, 41, 81, 10, 71, 24, 19, 99, 14, 94, 30, 77, 16, 87, 49, 46, 2, 90, 1, 89, 85, 93, 52, 26, 65, 48, 36, 82, 3, 6, 21, 28, 59, 27, 5, 50, 62, 42, 0, 60, 56, 63, 53, 68, 20, 25, 64, 92, 86, 37])
+print(q.score)
