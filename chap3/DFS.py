@@ -1,6 +1,8 @@
 import numpy as np
 import abc
-from search import ExploredSet,Node,Frontier
+
+from chap3.search import Frontier, Node
+
 
 class DFS(abc.ABC):
     init_state = None
