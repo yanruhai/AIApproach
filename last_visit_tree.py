@@ -1,6 +1,7 @@
 
 
 def last_visit(limit,node,b):
+    '''b是分支数,node是第一个访问的节点，一般是1'''
     stack=[]
     k=0
     added=b-2

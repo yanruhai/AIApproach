@@ -1,9 +1,14 @@
+import copy
+
+from sympy import limit
+
 from chap3.search import State
 
 
 static_id=0
 
 class TictactoeState(State):
+    limit=0
     board =[[0,0,0],[0,0,0],[0,0,0]]
     _dir=[[0,1],#right
           [1,0],#down
@@ -13,6 +18,21 @@ class TictactoeState(State):
         global static_id
         self.id=static_id
         static_id+=1
+        self.limit=len(board)
+
+    def do_action(self,act):
+        new_board = copy.copy(self.board)
+        new_board[act[0][0]][act[0][1]]=act[1]
+        new_obj=TictactoeState(new_board,self.limit)
+        return new_obj
+
+    def get_actions(self,player):
+        res=[]
+        for i in range(self.limit):
+            for j in range(self.limit):
+                if self.board[i][j]==0:
+                    res.append(((i,j),player))
+        return res
 
     def __get_score(self,who):
         if who==1:
