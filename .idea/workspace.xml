@@ -5,8 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4606b46-c6ee-4b03-a3a6-7a75b01d8480" name="Changes" comment="tt">
-      <change afterPath="$PROJECT_DIR$/chap6/6-1-mapcolor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap6/6-2-knight.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap6/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap6/test2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap7/Z3test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap7/exercise 7.19.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap7/exercise7_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap7/smtlibz3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap7/test1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap7/test2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap7/test3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap7/test4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap7/test5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap7/z3cnftodnf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap7/z3cnftodnf2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap7/z3version.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap8/z3smttest1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap8/z3smttest2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/hello.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/test1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap3/astar-8puzzle.py" beforeDir="false" afterPath="$PROJECT_DIR$/chap3/astar-8puzzle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap3/astarsearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/chap3/astarsearch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap6/6-1-mapcolor.py" beforeDir="false" afterPath="$PROJECT_DIR$/chap6/6-1-mapcolor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +67,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.6-1-mapcolor.executor": "Debug",
+    "Python.6-1-mapcolor.executor": "Run",
+    "Python.6-2-knight.executor": "Run",
+    "Python.7-3(1).executor": "Run",
     "Python.BFS.executor": "Debug",
+    "Python.Z3test.executor": "Run",
     "Python.astar-8puzzle (1).executor": "Run",
     "Python.astar-8puzzle.executor": "Run",
     "Python.astar-puzzle16.executor": "Run",
@@ -55,6 +79,8 @@
     "Python.astarsearch.executor": "Debug",
     "Python.classicsimulatedannealing.executor": "Run",
     "Python.climbhill-8puzzle.executor": "Debug",
+    "Python.exercise7_3 (1).executor": "Debug",
+    "Python.hello.executor": "Run",
     "Python.heutest.executor": "Debug",
     "Python.last_visit_tree.executor": "Run",
     "Python.maze_un.executor": "Run",
@@ -71,17 +97,27 @@
     "Python.queen8_genetic.executor": "Run",
     "Python.simulated_annealing_queen8_bygrok.executor": "Run",
     "Python.simulated_annealing_test.executor": "Run",
+    "Python.smtlibz3.executor": "Run",
     "Python.test.executor": "Run",
+    "Python.test1.executor": "Run",
+    "Python.test2 (1).executor": "Run",
     "Python.test2.executor": "Run",
+    "Python.test3.executor": "Run",
+    "Python.test4.executor": "Run",
+    "Python.test5.executor": "Run",
     "Python.tictactoe_astar.executor": "Run",
     "Python.tree_travel.executor": "Run",
     "Python.tsp.executor": "Run",
+    "Python.z3cnftodnf.executor": "Run",
+    "Python.z3cnftodnf2.executor": "Run",
+    "Python.z3smttest1.executor": "Run",
+    "Python.z3version.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/pythonproj/AIapproach/chap4",
-    "settings.editor.selected.configurable": "promo.ai.assistant"
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -93,8 +129,8 @@
       <recent name="C:\pythonproj\AIapproach\chap3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.6-1-mapcolor">
-    <configuration name="6-1-mapcolor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.z3smttest2">
+    <configuration name="smtlibz3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AIapproach" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,11 +139,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chap6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chap7" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap6/6-1-mapcolor.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap7/smtlibz3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -116,7 +152,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="last_visit_tree" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="z3cnftodnf2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AIapproach" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -125,11 +161,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chap7" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/last_visit_tree.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap7/z3cnftodnf2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -138,7 +174,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="minimaxalgo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="z3smttest1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AIapproach" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,11 +183,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chap4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chap8" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\pythonproj\AIapproach\chap5\minimaxalgo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap8/z3smttest1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -160,7 +196,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="z3smttest2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AIapproach" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,11 +205,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chap8" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap8/z3smttest2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -182,7 +218,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tictactoe_astar" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="z3version" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AIapproach" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -191,11 +227,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chap4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chap7" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\pythonproj\AIapproach\chap5\tictactoe_astar.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap7/z3version.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -206,11 +242,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.6-1-mapcolor" />
-        <item itemvalue="Python.last_visit_tree" />
-        <item itemvalue="Python.test2" />
-        <item itemvalue="Python.minimaxalgo" />
-        <item itemvalue="Python.tictactoe_astar" />
+        <item itemvalue="Python.z3smttest2" />
+        <item itemvalue="Python.z3smttest1" />
+        <item itemvalue="Python.smtlibz3" />
+        <item itemvalue="Python.z3version" />
+        <item itemvalue="Python.z3cnftodnf2" />
       </list>
     </recent_temporary>
   </component>
@@ -310,8 +346,27 @@
       <option name="project" value="LOCAL" />
       <updated>1744546203568</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="tt">
+      <option name="closed" value="true" />
+      <created>1747123519085</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747123519085</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tt" />
@@ -351,9 +406,9 @@
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/chap6/6-1-mapcolor.py</url>
-          <line>52</line>
-          <option name="timeStamp" value="49" />
+          <url>file://$PROJECT_DIR$/chap7/exercise7_3.py</url>
+          <line>146</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

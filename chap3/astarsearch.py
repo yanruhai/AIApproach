@@ -5,10 +5,10 @@ from typing import TypeVar, Generic, override
 from collections import Counter
 
 class AStarState(State):
-    fvalue = 0
+    '''fvalue = 0
     gvalue=0
     hvalue=0
-    hfunction=None#heu函数，默认为空,参数为goal,cur_state,应传入partial带有goal对象
+    hfunction=None#heu函数，默认为空,参数为goal,cur_state,应传入partial带有goal对象'''
     def __init__(self,hfunction=None):
         self.hfunction=hfunction
     def set_hfunction(self,hfunction):

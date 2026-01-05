@@ -24,9 +24,9 @@ class Board(AStarState):
 
     def get_id(self):
         return self.num
-    limit=3
+    '''limit=3
     bo=None
-    num=12345678#默认值
+    num=12345678#默认值'''
     def __str__(self):
         return f"{self.num}"
 
