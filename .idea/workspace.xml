@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4606b46-c6ee-4b03-a3a6-7a75b01d8480" name="Changes" comment="tt">
-      <change afterPath="$PROJECT_DIR$/chap8/answer 8.14.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap8/test1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap8/test2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap8/answer 8.14.py" beforeDir="false" afterPath="$PROJECT_DIR$/chap8/answer 8.14.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +31,12 @@
     &quot;assignee&quot;: &quot;yanruhai&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/yanruhai/AIApproach.git&quot;,
-    &quot;accountId&quot;: &quot;27594e26-22b9-48de-9a96-d124a260e23e&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/yanruhai/AIApproach",
+    "accountId": "2f61ff7e-c308-47b4-91e1-a46c049b3c81"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -44,63 +46,63 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.6-1-mapcolor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.6-2-knight.executor&quot;: &quot;Run&quot;,
-    &quot;Python.7-3(1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.BFS.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.Z3test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.answer 8.14.executor&quot;: &quot;Run&quot;,
-    &quot;Python.astar-8puzzle (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.astar-8puzzle.executor&quot;: &quot;Run&quot;,
-    &quot;Python.astar-puzzle16.executor&quot;: &quot;Run&quot;,
-    &quot;Python.astarimpl.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.astarsearch.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.classicsimulatedannealing.executor&quot;: &quot;Run&quot;,
-    &quot;Python.climbhill-8puzzle.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.exercise7_3 (1).executor&quot;: &quot;Debug&quot;,
-    &quot;Python.hello.executor&quot;: &quot;Run&quot;,
-    &quot;Python.heutest.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.last_visit_tree.executor&quot;: &quot;Run&quot;,
-    &quot;Python.maze_un.executor&quot;: &quot;Run&quot;,
-    &quot;Python.minimaxalgo.executor&quot;: &quot;Run&quot;,
-    &quot;Python.mst.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.puzzle-8.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.puzzle-8BFS.executor&quot;: &quot;Run&quot;,
-    &quot;Python.puzzle-8DFS (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.puzzle-8DFS.executor&quot;: &quot;Run&quot;,
-    &quot;Python.queen8-annealing (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.queen8-anneling.executor&quot;: &quot;Run&quot;,
-    &quot;Python.queen8-climbhill.executor&quot;: &quot;Run&quot;,
-    &quot;Python.queen8.executor&quot;: &quot;Run&quot;,
-    &quot;Python.queen8_genetic.executor&quot;: &quot;Run&quot;,
-    &quot;Python.simulated_annealing_queen8_bygrok.executor&quot;: &quot;Run&quot;,
-    &quot;Python.simulated_annealing_test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.smtlibz3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test2 (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.test2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test4.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tictactoe_astar.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tree_travel.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tsp.executor&quot;: &quot;Run&quot;,
-    &quot;Python.z3cnftodnf.executor&quot;: &quot;Run&quot;,
-    &quot;Python.z3cnftodnf2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.z3smttest1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.z3smttest2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.z3version.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/pythonproj/AIapproach/chap4&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.6-1-mapcolor.executor": "Run",
+    "Python.6-2-knight.executor": "Run",
+    "Python.7-3(1).executor": "Run",
+    "Python.BFS.executor": "Debug",
+    "Python.Z3test.executor": "Run",
+    "Python.answer 8.14.executor": "Run",
+    "Python.astar-8puzzle (1).executor": "Run",
+    "Python.astar-8puzzle.executor": "Run",
+    "Python.astar-puzzle16.executor": "Run",
+    "Python.astarimpl.executor": "Debug",
+    "Python.astarsearch.executor": "Debug",
+    "Python.classicsimulatedannealing.executor": "Run",
+    "Python.climbhill-8puzzle.executor": "Debug",
+    "Python.exercise7_3 (1).executor": "Debug",
+    "Python.hello.executor": "Run",
+    "Python.heutest.executor": "Debug",
+    "Python.last_visit_tree.executor": "Run",
+    "Python.maze_un.executor": "Run",
+    "Python.minimaxalgo.executor": "Run",
+    "Python.mst.executor": "Debug",
+    "Python.puzzle-8.executor": "Debug",
+    "Python.puzzle-8BFS.executor": "Run",
+    "Python.puzzle-8DFS (1).executor": "Run",
+    "Python.puzzle-8DFS.executor": "Run",
+    "Python.queen8-annealing (1).executor": "Run",
+    "Python.queen8-anneling.executor": "Run",
+    "Python.queen8-climbhill.executor": "Run",
+    "Python.queen8.executor": "Run",
+    "Python.queen8_genetic.executor": "Run",
+    "Python.simulated_annealing_queen8_bygrok.executor": "Run",
+    "Python.simulated_annealing_test.executor": "Run",
+    "Python.smtlibz3.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.test1.executor": "Run",
+    "Python.test2 (1).executor": "Run",
+    "Python.test2.executor": "Run",
+    "Python.test3.executor": "Run",
+    "Python.test4.executor": "Run",
+    "Python.test5.executor": "Run",
+    "Python.tictactoe_astar.executor": "Run",
+    "Python.tree_travel.executor": "Run",
+    "Python.tsp.executor": "Run",
+    "Python.z3cnftodnf.executor": "Run",
+    "Python.z3cnftodnf2.executor": "Run",
+    "Python.z3smttest1.executor": "Run",
+    "Python.z3smttest2.executor": "Run",
+    "Python.z3version.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/pythonproj/AIapproach/chap4",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\pythonproj\AIapproach\chap4" />
@@ -133,7 +135,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="smtlibz3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AIapproach" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,11 +144,33 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chap7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chap8" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap7/smtlibz3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap8/test1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AIapproach" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chap8" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap8/test2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -199,42 +223,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="z3version" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AIapproach" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chap7" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chap7/z3version.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.answer 8.14" />
+        <item itemvalue="Python.test2" />
+        <item itemvalue="Python.test1" />
         <item itemvalue="Python.z3smttest2" />
         <item itemvalue="Python.z3smttest1" />
-        <item itemvalue="Python.smtlibz3" />
-        <item itemvalue="Python.z3version" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
+        <option value="bundled-python-sdk-4f4e415b4190-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.26053.29" />
       </set>
     </attachedChunks>
   </component>
@@ -378,11 +380,6 @@
           <url>file://$PROJECT_DIR$/chap3/test.py</url>
           <line>95</line>
           <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/chap3/astar-8puzzle.py</url>
-          <line>165</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/chap4/climbhill-8puzzle.py</url>
