@@ -1,9 +1,8 @@
 
-import numpy as np
-from sympy import false
-from torch.fx.experimental.unification import variables
 
 
+
+#constraints结构{key1:{key2:function1},key2:{key3:function2}}
 class CSP:
     def __init__(self, variables, domains, constraints,result):
         self.variables = variables  # 变量列表
@@ -14,7 +13,7 @@ class CSP:
     def is_consistent(self, variable, assignment):
         """检查变量在当前赋值下是否满足所有相关约束"""
         for neighbor in self.constraints[variable]:
-            if neighbor in assignment:
+            if neighbor in assignment:#neighbor是不是assignment的key,assignment也是dict,key:value
                 constraint_func = self.constraints[variable][neighbor]
                 if not constraint_func(assignment[variable], assignment[neighbor]):
                     return False

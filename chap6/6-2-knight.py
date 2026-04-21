@@ -1,17 +1,13 @@
 
 
 
-import numpy as np
-from sympy import false
-from torch.fx.experimental.unification import variables
-
-
 class CSP:
     def __init__(self, variables, domains, constraints,result):
         self.variables = variables  # 变量列表
         self.domains = domains  # 各变量的定义域 {变量: [可能的值]}
         self.constraints = constraints  # 约束条件 {变量对: 约束函数}
         self.result=result #保管结果
+        self.result_list= []#用于重复数据校验
 
     def is_consistent(self, variable, assignment):
         """检查变量在当前赋值下是否满足所有相关约束"""
@@ -22,13 +18,19 @@ class CSP:
                     return False
         return True
 
-
     count=0#解的数量
     def print_result(self):
+        t=set(self.result.values())
+        for re in self.result_list:
+             if re==t:#集合校验
+                    return
         self.count+=1
+        self.result_list.append(set(self.result.values()))
         print('解',self.count)
-        for u,v in self.result.items():
-            print(u,v)
+
+        #for u,v in self.result.items():
+            #print(u,v)
+
 
     def dfs_search(self,k):
         var = self.variables[k]
@@ -86,8 +88,8 @@ def add_neighbor_constraint(constraints, var1, var2):
     # 确保var1的约束字典存在
     constraints[var1].setdefault(var2, constraint)
     # 确保var2的约束字典存在
-    #constraints[var2].setdefault(var1, constraint)
+    constraints[var2].setdefault(var1, constraint)
 
 
-c=create_csp(4,6)
+c=create_csp(8,32)
 c.dfs_search(0)
