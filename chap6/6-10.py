@@ -80,6 +80,7 @@ class CSP(BaseModel):
         del self.result[var]
 
 
+
 def create_map_coloring_csp():
     # 变量：州/省
     variables = ['WA', 'NT', 'SA', 'Q', 'NSW', 'V', 'T']
