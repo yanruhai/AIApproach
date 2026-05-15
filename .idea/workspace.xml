@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d4606b46-c6ee-4b03-a3a6-7a75b01d8480" name="Changes" comment="tt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap6/6-10.py" beforeDir="false" afterPath="$PROJECT_DIR$/chap6/6-10.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +99,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/pythonproj/AIapproach/chap4&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;application.passwordSafe&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -110,7 +111,7 @@
       <recent name="C:\pythonproj\AIapproach\chap3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.6-10">
+  <component name="RunManager" selected="Python.6-1-mapcolor">
     <configuration name="6-1-mapcolor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AIapproach" />
       <option name="ENV_FILES" value="" />
@@ -223,10 +224,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.6-1-mapcolor" />
         <item itemvalue="Python.6-10" />
         <item itemvalue="Python.6-2-knight" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.6-1-mapcolor" />
         <item itemvalue="Python.answer 8.14" />
       </list>
     </recent_temporary>
@@ -359,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778572750897</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="tt">
+      <option name="closed" value="true" />
+      <created>1778576826220</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1778576826220</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -414,6 +423,11 @@
           <url>file://$PROJECT_DIR$/chap7/exercise7_3.py</url>
           <line>146</line>
           <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/chap6/6-1-mapcolor.py</url>
+          <line>59</line>
+          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

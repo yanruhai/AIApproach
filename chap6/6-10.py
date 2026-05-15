@@ -3,7 +3,7 @@ import abc
 import numpy as np
 from pydantic import BaseModel
 
-class ConstrainedNode(abc.ABC,BaseModel):
+class CSPNode(abc.ABC,BaseModel):
     domain:set
 
     def __init__(self,id,domain,**kwargs):
@@ -11,19 +11,24 @@ class ConstrainedNode(abc.ABC,BaseModel):
         self.domain=domain#可能的值
         self.value=None
         self.remark=kwargs
+        self.constraint={}
         #self.name=""#用于显示
 
     def set_value(self,value):
         self.value=value
 
-class ConstrainedSet(abc.ABC):
+    def add_constraint(self,var,func:callable):
+        self.constraint[var]=func
+
+
+class CspSet(abc.ABC):
     def __init__(self,variables:list,domain):
         self.nodes=[]
         for i in variables:
-            node= ConstrainedNode(i,domain)
+            node= CSPNode(i,domain)
             self.nodes.append(node)
 
-    def add_neighbor_constraint(self,constraints:dict, var1:ConstrainedNode, var2:ConstrainedNode,constraint:callable):
+    def add_neighbor_constraint(self,constraints:dict, var1:CSPNode, var2:CSPNode,constraint:callable):
         """添加相邻变量的约束（颜色不同）"""
         # 正确方式：使用字典的setdefault方法安全添加约束
         constraints[var1.id].setdefault(var2, constraint)
@@ -32,17 +37,17 @@ class ConstrainedSet(abc.ABC):
 
 class CSP(BaseModel):
 
-    def __init__(self, variables, domains:list,constraints, result):
+    def __init__(self, variables, domains:list,constraints):
+        '''domain 各变量的定义域 {变量: [可能的值]}
+            contraints={(var1,var2):function}'''
         self.variables = variables  # 变量列表
-        self.domains = domains  # 各变量的定义域 {变量: [可能的值]}
         self.constraints = constraints  # 约束条件 {变量对: 约束函数}
-        self.result=result #保管结果
         self.result_list= []#用于重复数据校验
-        self.nodes=[]
+        self.nodes={}
         self.count=0
-        for i,v in self.variables:
-            n=ConstrainedNode(v,domains[i])
-            self.nodes.append(n)
+        for i,v in variables:
+            n=CSPNode(v,domains[i])
+            self.nodes[v]=n
 
 
     def is_consistent(self, variable, assignment):
@@ -54,6 +59,8 @@ class CSP(BaseModel):
                     return False
         return True
 
+    def add_contraint(self,var1,var2,func:callable):
+        self.nodes[var1].add_constraint(var2,func)
 
     def print_result(self):
         t=set(self.result.values())
